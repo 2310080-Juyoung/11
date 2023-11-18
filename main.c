@@ -3,23 +3,21 @@
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 int main(void){
-	int i;
-	int grade[5];
-	int sum =0;
-	
-	for (i=0;i<5;i++){
-		printf("grade[%i] = ", i);
-		scanf("%d", &grade[i]);
-	}
-	
-	printf("Grade values: ");
-    for (i=0;i<5;i++){
-        printf("%d ", grade[i]);
-        sum += grade[i];
-    }
+	char *pc;
+	int *pi;
+	double *pd;
 
-    int average = sum / 5;
-    printf("\nAverage: %d\n", average);
+	pc = (char *)10000;
+	pi = (int*)10000;
+	pd = (double *)10000;
 	
+	printf("증가 전 : pc = %d, pi = %d, pd = %d\n", pc, pi, pd);
+	
+	pc++;
+	pi++;
+	pd++;
+	
+	printf("증가 후 : pc = %d, pi = %d, pd = %d\n", pc, pi, pd);
+ 
 	return 0;
-	}
+}
